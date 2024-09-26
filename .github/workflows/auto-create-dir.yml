@@ -38,6 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: auto_create
     steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
