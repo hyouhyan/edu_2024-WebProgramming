@@ -6,11 +6,7 @@
 </head>
 <body>
 <body>
-この部分はHTMLです!<br>
-<?php
-    
-    print "この部分がPHPスクリプトです!<br>";
-?>
-この部分はHTMLです!<br>
+<?=$data?>
+<?php print $data ?>
 </body>
 </html>
