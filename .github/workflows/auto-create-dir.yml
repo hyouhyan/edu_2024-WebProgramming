@@ -43,6 +43,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          head: add-todays-files
+          branch: add-todays-files
           title: "CI: 本日分の空ファイル作成"
           body: "This is an automatically generated PR from GitHub Actions"
