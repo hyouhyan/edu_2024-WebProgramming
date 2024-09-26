@@ -1,3 +1,9 @@
+<?php
+
+    $data = "Hello, world!<br>";
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
