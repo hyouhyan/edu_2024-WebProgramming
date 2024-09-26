@@ -1,7 +1,6 @@
 name: auto create dir
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 7 * * thu'
 
