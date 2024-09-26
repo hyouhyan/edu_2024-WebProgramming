@@ -1,0 +1,47 @@
+name: auto create dir
+
+on:
+  schedule:
+    - cron: '0 7 * * thu'
+
+jobs:
+  auto_create:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v4
+
+    - name: Create new branch
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git checkout -b add-todays-files
+        git push origin add-todays-files
+
+    - name: setup python
+      uses: actions/setup-python@v5.1.1
+      with:
+        python-version: '3.11.5'
+
+    - name: Create Directory
+      run: python dir_maker.py
+
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m "add: todays files"
+        git push origin add-todays-files
+
+  create-pull-request:
+    runs-on: ubuntu-latest
+    needs: auto_create
+    steps:
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          head: add-todays-files
+          title: "CI: 本日分の空ファイル作成"
+          body: "This is an automatically generated PR from GitHub Actions"
