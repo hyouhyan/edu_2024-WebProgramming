@@ -17,7 +17,7 @@
         if ($cnt >= 8 or $cnt <= $data) {
             print "○";
         }
-        if ($cnt <= 8 and $cnt <= $data) {
+        if ($cnt >= 8 and $cnt <= 10) {
             print "▼";
         }
         if (! ($cnt >= 8 and $cnt <= 10)) {
