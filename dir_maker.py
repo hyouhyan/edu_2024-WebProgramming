@@ -9,7 +9,7 @@ max_file = 26
 today = datetime.datetime.now()
 today_str = today.strftime('%Y-%m-%d')
 
-make_dir_path = f'./{study_index}_{today_str}/'
+make_dir_path = f'./{study_index:02}_{today_str}/'
 
 #作成しようとしているディレクトリが存在するかどうかを判定する
 if os.path.isdir(make_dir_path):
