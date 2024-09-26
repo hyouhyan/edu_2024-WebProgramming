@@ -24,7 +24,7 @@
         if ($cnt <= 3){
             print "◽︎";
         }
-        if ($cnt <> 5){
+        if ($cnt <> 7){
             print "★";
         }
         print "<br>";
