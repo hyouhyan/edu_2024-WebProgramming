@@ -17,8 +17,8 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git checkout -b add-todays-files_${{ env.CURRENT_DATETIME }}
-        git push origin add-todays-files_${{ env.CURRENT_DATETIME }}
+        git checkout -b add-todays-files
+        git push origin add-todays-files
 
     - name: setup python
       uses: actions/setup-python@v5.1.1
@@ -32,7 +32,7 @@ jobs:
       run: |
         git add .
         git commit -m "add: todays files"
-        git push origin add-todays-files_${{ env.CURRENT_DATETIME }}
+        git push origin add-todays-files
 
   create-pull-request:
     runs-on: ubuntu-latest
@@ -46,6 +46,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          branch: add-todays-files_${{ env.CURRENT_DATETIME }}
+          head: add-todays-files
           title: "CI: 本日分の空ファイル作成"
           body: "This is an automatically generated PR from GitHub Actions"
