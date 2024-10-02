@@ -35,6 +35,20 @@ else:
 for i in range(1, max_file+1):
     path = make_dir_path + f'sample-{study_index:02}-{i:02}.php'
     with open(path, 'w') as f:
-        f.write(f'<?php echo "Hello, World!"; ?>')
+        f.write(f'''
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<body>
+<?php
+    print "この部分がPHPスクリプトです。";
+?>
+</body>
+</html>
+        ''')
         print(f'{path}を作成しました。')
     
