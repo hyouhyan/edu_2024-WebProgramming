@@ -21,7 +21,7 @@
     mt_srand();
 
     //1~4（用意されたバナーの数）の乱数を生成
-    $data = my_rand(1, 4);
+    $data = mt_rand(1, 4);
     //生成された乱数からバナー画像とリンク先のHTMLを組み立て
     $html = "<A href='". $banner[$data][0] . "'>" . 
                 "<IMG src='images/" . $banner[$data][1] . "'></A>";
