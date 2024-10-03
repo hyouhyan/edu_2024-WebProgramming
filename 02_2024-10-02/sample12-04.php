@@ -12,7 +12,7 @@
 
     print "送信されたデータは<br>";
 
-    print "名前→", $rcv_username. "<br>";
+    print "名前→". $rcv_username. "<br>";
     
     print "住所→".$rcv_useraddress. "<br>";
 
