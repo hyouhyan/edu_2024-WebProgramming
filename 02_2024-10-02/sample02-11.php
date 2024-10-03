@@ -11,7 +11,7 @@
     
     mt_srand();
 
-    for($cnt = 1; $cnt <= 10; $cnt++){
+    for($cnt = 1; $cnt <= 5; $cnt++){
         $imagefile = mt_rand(1, 9);
 
         $imagefile = "image" . $imagefile . ".gif";
