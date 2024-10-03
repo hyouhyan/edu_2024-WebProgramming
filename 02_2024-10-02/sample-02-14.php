@@ -13,7 +13,7 @@
     $data=30;
     $data=20;
     print min($data1,$data2);
-    print "<br">;
+    print "<br>";
 ?>
 </body>
 </html>

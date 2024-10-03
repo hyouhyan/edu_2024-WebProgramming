@@ -14,7 +14,7 @@
                     $_POST['inputdata'] .
                     "] です ! ";
         }
-        e;se {
+        else {
             print "テキストボックスは空欄です ! ";
         }
         print "<br><br><br>";
