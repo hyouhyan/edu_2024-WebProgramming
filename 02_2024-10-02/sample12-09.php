@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-    if (isset($_POST['btnExit'])){
+    if (isset($_POST['btnExec'])){
         if (isset($_POST['inputdata'])){
             print "配信を希望する";
         }
@@ -14,10 +14,6 @@
             print "配信を希望しない";
         }
         print "<br><br><br>";
-    }
-    elseif ($_SERVER['REQUEST_METHOD'] == "GET"){
-        print "GETで送信されました!<br>";
-        print "名前→".$_POST['username'];
     }
 ?>
 配信を希望する場合はチェックを付けて[送信]ボタンをクリックしてください。
