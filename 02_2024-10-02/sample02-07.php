@@ -14,6 +14,6 @@
 
         print floor($data / 100)*100 . "<br>";
 
-         ?>
+        ?>
     </body>
 </html>
