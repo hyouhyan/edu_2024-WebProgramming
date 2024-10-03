@@ -2,19 +2,22 @@ import os
 import datetime
 
 #作成するディレクトリのpathを指定
-study_index = 2
+max_study_index = 15
 
 # ディレクトリ一覧取得
 dir_list = os.listdir('./')
 
-for i in range(1, 15):
+for i in range(1, max_study_index + 1):
     # dir_listにiで「始まる」ディレクトリがあるかどうかを判定する
+    study_index = i
     if any([d for d in dir_list if d.startswith(f'{i:02}_')]):
         print(f'{i:02}_が既に存在します。')
     else:
         print(f'{i:02}_が存在しません。')
-        study_index = i
         break
+    if i == max_study_index:
+        print("すべてのディレクトリが存在します。")
+        exit()
 
 # 日付を取得する
 today = datetime.datetime.now()
