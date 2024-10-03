@@ -12,7 +12,7 @@
         print "送信ボタンがクリックされました!<br><br>";
     }
     elseif(isset($_POST['btnCancel'])){
-        print "確認ボタンがクリックされました!<br><br>";
+        print "キャンセルボタンがクリックされました!<br><br>";
     }
     ?>
 

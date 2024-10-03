@@ -12,7 +12,7 @@
     }
     elseif ($_SERVER['REQUEST_METHOD'] == "GET"){
         print "GETで送信されました!<br>";
-        print "名前→".$_POST['username'];
+        print "名前→".$_GET['username'];
     }
 ?>
 </body>

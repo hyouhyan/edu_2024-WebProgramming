@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title></title>
 </head>
 <body>
 <?php
+  
+  //乱数ジェネレータを初期化
+  mt_srand();
 
-    //乱数ジェネレータを初期化
-    mt_srand();
-
-    //１から６までの乱数を５回生成
+  //全部で10ヶのパスワードを生成するループ　
+  for ($passcnt = 1; $passcnt <= 10; $passcnt++) {
+    $password = "";
+    //1から9までの乱数を5回生成してパスワードに追加
     for ($cnt = 1; $cnt <= 5; $cnt++) {
-        print mt_rand(1,6);
-        print "<br>";
+      $password = $password . mt_rand(1, 9);
     }
+    //AからZまでの乱数を5回生成してパスワードに追加
+    for ($cnt = 1; $cnt <= 5; $cnt++) {
+      $password = $password . chr(mt_rand(65, 90));
+    }
+    print $password;
+    print "<br>";
+  }
 
 ?>
 </body>

@@ -15,10 +15,10 @@
                     print "$num ヶめのチェックボックスはOFF<br>";
                 }
             }
-            print "<hr><hr>";
+            print "<br><br>";
         }
          ?>
-    開発経験のある言語にチェックをつけて[送信]ボタンをクリックしてください（複数選択可）。
+    開発経験のある言語にチェックを付けて[送信]ボタンをクリックしてください（複数選択可）。
     <form action="?php $_SERVER['SCRIPT_NAME']?" method="post">
         <p><input type="checkbox" name="inputdata1">PHP</p>
         <p><input type="checkbox" name="inputdata2">Java</p>

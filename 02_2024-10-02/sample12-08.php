@@ -9,7 +9,7 @@
     
     if (isset($_POST['btnExec'])) {
         //送信ボタンがクリックされたとき
-        if (strlen($_POST['inputdata']) > 0) {
+        if (isset($_POST['inputdata']) > 0) {
             print "選択されたラジオボタンは「" . 
                 $_POST['inputdata'] . 
                 "」です!";

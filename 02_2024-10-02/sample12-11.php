@@ -24,10 +24,10 @@ print "<br><br>";
 ?>
 テキストボックスに値を入力して [送信] ボタンをクリックしてください (複数入力可)。
 <form action="<?php $_SERVER['SCRIPT_NAME']?>" method="POST">
-<p><input size="40" type="text" name="inputdata []"></p>
-<p><input size="40" type="text" name="inputdata []"></p>
-<p><input size="40" type="text" name="inputdata []"></p> 
-<p><input size="40" type="text" name="inputdata []"></p>
+<p><input size="40" type="text" name="inputdata[]"></p>
+<p><input size="40" type="text" name="inputdata[]"></p>
+<p><input size="40" type="text" name="inputdata[]"></p> 
+<p><input size="40" type="text" name="inputdata[]"></p>
 <input type="submit" name="btnExec" value="送信">
 </form>
 </body>

@@ -10,8 +10,8 @@
     print "<br>";
     print min(42,67,55,33,7,22);
     print "<br>";
-    $data=30;
-    $data=20;
+    $data1=30;
+    $data2=20;
     print min($data1,$data2);
     print "<br>";
 ?>

@@ -23,7 +23,7 @@
     <select size="6" name="seldata">
         <option value="ブラジル">ブラジル</option>
         <option value="イタリア">イタリア</option>
-        <option value="アルゼンチン">アルゼンチナ</option>
+        <option value="アルゼンチン">アルゼンチン</option>
         <option value="フランス">フランス</option>
         <option value="イングランド">イングランド</option>
         <option value="オランダ">オランダ</option>

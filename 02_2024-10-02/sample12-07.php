@@ -10,9 +10,9 @@
     if (isset($_POST['btnExec'])) {
         //送信ボタンがクリックされたとき
         if (strlen($_POST['inputdata']) > 0) {
-            print "テキストボックスにn湯力されたデータは [" .
+            print "テキストボックスに入力されたデータは「" .
                     $_POST['inputdata'] .
-                    "] です ! ";
+                    "」です ! ";
         }
         else {
             print "テキストボックスは空欄です ! ";

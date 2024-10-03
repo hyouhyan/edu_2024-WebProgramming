@@ -10,7 +10,7 @@
     <?php
     // 例1:10回の加算ループ
     $data = 0;
-    for ($cnt = 1; $cnt < 10; $cnt++) {
+    for ($cnt = 1; $cnt <= 10; $cnt++) {
         print ++$data;
         print ",";
     }
