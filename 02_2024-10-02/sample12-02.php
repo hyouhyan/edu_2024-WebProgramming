@@ -7,7 +7,7 @@
 <body>
 <?php
     
-    printf "GETで送信されたデータは<br>";
+    print "GETで送信されたデータは<br>";
 
     //スーパーグローバル変数で「名前」を受け取る
     print "名前→" . $_GET['username'] . "<br>";
