@@ -8,22 +8,22 @@
         <?PHP 
         $data = 1254.56789;
 
-        print "1キロバイトは";
+        print "1キロバイトは ";
         print pow(1024, 1);
-        print "バイト<br>";
+        print " バイト<br>";
 
-        print "1メガバイトは";
+        print "1メガバイトは ";
         print pow(1024, 2);
-        print "バイト<br>";
+        print " バイト<br>";
 
-        print "1ギガバイトは";
+        print "1ギガバイトは ";
         print pow(1024, 3);
-        print "バイト<br>";
+        print " バイト<br>";
 
-        print "1テラバイトは";
+        print "1テラバイトは ";
         print pow(1024, 4);
-        print "バイト<br>";
+        print " バイト<br>";
         
-         ?>
+        ?>
     </body>
 </html>
