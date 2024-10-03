@@ -12,6 +12,9 @@ jobs:
     - name: Git checkout
       uses: actions/checkout@v4
 
+    - name: Set Timezone JST
+      run: sudo timedatectl set-timezone Asia/Tokyo
+
     - name: setup python
       uses: actions/setup-python@v5.1.1
       with:
