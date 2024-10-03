@@ -22,13 +22,7 @@ today_str = today.strftime('%Y-%m-%d')
 
 make_dir_path = f'./{study_index:02}_{today_str}/'
 
-#作成しようとしているディレクトリが存在するかどうかを判定する
-if os.path.isdir(make_dir_path):
-    #既にディレクトリが存在する場合は何もしない
-    pass
-else:
-    #ディレクトリが存在しない場合のみ作成する
-    os.makedirs(make_dir_path)
+os.makedirs(make_dir_path)
 
 # .gitkeepファイルを作成する
 with open(f'{make_dir_path}.gitkeep', 'w') as f:
