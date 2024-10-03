@@ -3,7 +3,6 @@ import datetime
 
 #作成するディレクトリのpathを指定
 study_index = 2
-max_file = 26
 
 # ディレクトリ一覧取得
 dir_list = os.listdir('./')
@@ -31,24 +30,7 @@ else:
     #ディレクトリが存在しない場合のみ作成する
     os.makedirs(make_dir_path)
 
+# .gitkeepファイルを作成する
+with open(f'{make_dir_path}.gitkeep', 'w') as f:
+    print(f'{make_dir_path}.gitkeepを作成しました。')
 
-for i in range(1, max_file+1):
-    path = make_dir_path + f'sample-{study_index:02}-{i:02}.php'
-    with open(path, 'w') as f:
-        f.write(f'''
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<body>
-<?php
-    print "この部分がPHPスクリプトです。";
-?>
-</body>
-</html>
-        ''')
-        print(f'{path}を作成しました。')
-    
