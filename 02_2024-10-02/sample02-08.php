@@ -7,7 +7,7 @@
 <body>
 <?php
 
-$data = 1234.56789;
+$data = 1254.56789;
 
 //小数点以下を切り上げ
 print ceil($data);
