@@ -7,9 +7,12 @@
 ## ディレクトリ構造(例)
 
 ```
-01_2024-04-01
+01
 ├ sample01-01.php
 └ sample01-02.php
+02
+├ sample02-01.php
+└ sample02-02.php
 
 ```
 
