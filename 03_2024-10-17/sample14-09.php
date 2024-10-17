@@ -1,4 +1,4 @@
-<? php
+<?php
     if (isset($_POST['btnExec'])){
         if ($_POST['password'] == "12345"){
             session_start();
@@ -20,9 +20,9 @@
 <body>
 ユーザーIDとパスワードを入力して[送信]ボタンをクリックしてください。
 <form action="<?php $_SERVER['SCRIPT_NAME']?>" method="POST">
-    ユーザーID：<input size="20" type="text" name="userid"><br>
+    ユーザーID:<input size="20" type="text" name="userid"><br>
     <br>
-    パスワード：<input size="15" type="password" name="password">
+    パスワード:<input size="15" type="password" name="password">
     <input type="submit" name="btnExec" value="送信">
 </form>
 

@@ -11,7 +11,7 @@
 
         $errmsg = "";
         
-        if(storen($_FILES['uploadfile']['name']) > 0){
+        if(strlen($_FILES['uploadfile']['name']) > 0){
 
             $fileinfo = pathinfo($_FILES['uploadfile']['name']);
             $fileext = strtoupper($fileinfo['extension']);
