@@ -10,7 +10,7 @@
         for($cnt=0;$cnt<4;$cnt++){
             $errmsg="";
             if(strlen($_FILES['uploadfile']['name'][$cnt])>0){
-                $fileinfo=pathinfo($_FILES['uploadfile']['name'][$cnt]):
+                $fileinfo=pathinfo($_FILES['uploadfile']['name'][$cnt]);
                 $fileext=strtoupper($fileinfo['extension']);
                 if($_FILES['uploadfile']['size'][$cnt]>102400){
                     $errmsg.="ファイルサイズが大きすぎます! 100KB以下にしてください。<br>";
@@ -20,13 +20,13 @@
                     $errmsg.="対象ファイルはGIFまたはJPGのみです!<br>";
                 }else{
                     $movetofile = "images/upf_".$_FILES['uploadfile']['name'][$cnt];
-                    if(!move_uploaded_file($_FILES['uploadfile']['name'][$cnt],$movetofile)){
+                    if(!move_uploaded_file($_FILES['uploadfile']['tmp_name'][$cnt],$movetofile)){
                         $errmsg.="ファイルのアップロードに失敗しました。<br>";
                     }
                 }
                 if($errmsg==""){
                     print $_FILES['uploadfile']['name'][$cnt];
-                    print "<img src='$movetofile'><br>"
+                    print "<img src='$movetofile'><br>";
                 }else{
                     print $errmsg."<br><br>";
                     @unlink($_FILES['uploadfile']['tmp_name'][$cnt]);
