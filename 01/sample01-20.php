@@ -5,7 +5,6 @@
     <title></title>
 </head>
 <body>
-<body>
 <?php
     for ($cnt = 1; $cnt <= 10; $cnt++){
         print $cnt;
