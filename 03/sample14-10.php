@@ -70,7 +70,7 @@ if (isset($_GET['id'])) {
 </tr>
 <tr>
     <td>4</td>
-    <td>パソコン PC-999999 Wind100G</td>
+    <td>パソコン PC-999999 Win100G</td>
     <td>
         <a href="<?php echo $_SERVER['SCRIPT_NAME']."?id=4"?>">カートに入れる</a> </td>
 </tr>

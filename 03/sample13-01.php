@@ -1,7 +1,7 @@
 
 <?php
     $data1 = 10;
-    $data2 = "PHP: Hypertext Preprocessor";
+    $data2 = "PHP:Hypertext Preprocessor";
 
     if(setcookie("mycookiedata",
                 "ck_data1=$data1&ck_data2=$data2",
