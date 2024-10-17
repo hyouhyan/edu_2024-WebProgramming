@@ -10,7 +10,7 @@
         $data=$_COOKIE['mycookiedata'];
         print $data."<BR><BR>";
         parse_str($data,$output);
-        print "クッキーに保存されたデータは、<BR>";
+        print "クッキーに保存されていたデータは、<BR>";
         print $output['ck_data1']."<BR>";
         print $output['ck_data2']."<BR>";
     }
