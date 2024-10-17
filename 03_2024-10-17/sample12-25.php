@@ -28,7 +28,7 @@
             else{
                 $movetofile = "images/upf_". $_FILES['uploadfile']['name'];
                 if(! move_uploaded_file($_FILES['uploadfile']['tmp_name'], $movetofile)){
-                    $errmsg = "ファイルのアップデートに失敗しました<br>";
+                    $errmsg = "ファイルのアップロードに失敗しました。<br>";
                 }
             }
             if($errmsg == ""){
