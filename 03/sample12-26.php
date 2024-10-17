@@ -36,7 +36,7 @@
         print "<br><br>";
     }
 ?>
-アップロードする画像ファイルを指定して[実行]のボタンをクリックしてください。
+アップロードする画像ファイルを指定して[実行]ボタンをクリックしてください。
 <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
     <P><input type="file" name="uploadfile[]" size="60"></p>
     <P><input type="file" name="uploadfile[]" size="60"></p>
