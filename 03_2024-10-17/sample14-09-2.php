@@ -1,4 +1,4 @@
-<? php
+<?php
     session_start();
 
     if (!empty($_SESSION['sesuserid'])){
@@ -10,7 +10,7 @@
         print "</head>\n";
         print "<body><p>\n";
         print "あなたのユーザーIDは ".$_SESSION['sesuserid']." です。<br>";
-        print "<br>"
+        print "<br>";
         print "*****************************************<br>";
         print "*****************************************<br>";
         print "** ここにユーザのメインコンテンツ **<br>";

@@ -1,5 +1,4 @@
-<?ptp
-
+<?php
     session_start();
 ?>
 
