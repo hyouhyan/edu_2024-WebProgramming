@@ -3,6 +3,12 @@
 
 ## 仕様
 - 言語: PHP
+- 実行環境
+    - OS: MacOS 15.0.1(Sequoia)
+    - MAMP 7.0
+        - Apache(port: 80)
+        - PHP 8.3.9
+        - MySQL(port: 3306)
 
 ## ディレクトリ構造(例)
 
