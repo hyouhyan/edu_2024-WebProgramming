@@ -1,19 +1,19 @@
 # ファイル構成
 ```
-04_2024-10-24
-├── bbs-db
+04_2024-10-24/
+├── bbs-db/
 │   ├── bbs_mysql.php
 │   ├── style.css
-│   └── templates
+│   └── templates/
 │       └── bbs.html
-├── rss
+├── rss/
 │   ├── rss_reader.php
 │   └── style.css
-└── todo
-    ├── data
+└── todo/
+    ├── data/
     │   └── todo.txt
     ├── style.css
-    ├── templates
+    ├── templates/
     │   └── todo.html
     └── todo.php
 ```
