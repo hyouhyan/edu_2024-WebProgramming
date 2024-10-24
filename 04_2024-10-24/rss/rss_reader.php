@@ -9,9 +9,9 @@ $context = stream_context_create(array("ssl" => array(
 	"verify_peer" => false,
 )));
 libxml_set_streams_context($context);
-$xml = simplexml_load_file("https://cyber.harvard.edu/blogs/gems/tech/rss2sample.xml");
-# $xml = simplexml_load_file("https://techacademy.jp/magazine/feed");
-# $xml = simplexml_load_file("https://gigazine.net/news/rss_2.0/");
+// $xml = simplexml_load_file("https://cyber.harvard.edu/blogs/gems/tech/rss2sample.xml");
+// $xml = simplexml_load_file("https://techacademy.jp/magazine/feed");
+$xml = simplexml_load_file("https://gigazine.net/news/rss_2.0/");
 foreach ($xml->channel->item as $feed) {
 	$stmt = $mysqli->prepare("SELECT * FROM rss_item WHERE guid = ?");
 	$stmt->bind_param("s", $feed->guid);
