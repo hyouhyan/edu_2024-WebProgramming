@@ -57,7 +57,7 @@ while ($rss = $query_result->fetch_array()) {
 		</a>
 
 		<p>
-			<strong>作成：<?php echo (htmlspecialchars($rss["author"])); ?>
+			<strong>作成: <?php echo (htmlspecialchars($rss["author"])); ?>
 				(<?php echo (htmlspecialchars($rss["pub_date"])); ?>)
 			</strong>
 		</p>
