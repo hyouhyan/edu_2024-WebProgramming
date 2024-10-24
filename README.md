@@ -2,7 +2,7 @@
 2024年度 後期 Webプログラミング及び演習 の授業で作成したプログラムたち。
 
 ## 仕様
-- 使用技術: PHP, MySQL
+- 使用技術: PHP, MySQL, Node.js
 - 実行環境
     - OS: MacOS 15.0.1(Sequoia)
     - MAMP 7.0
