@@ -44,3 +44,5 @@ $smarty->assign("error_message", $error_message);
 $smarty->assign("bbs_list", $bbs_list);
 
 $smarty->display("bbs.html");	// テンプレートを表示
+
+?>
