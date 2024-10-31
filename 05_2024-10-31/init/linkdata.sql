@@ -1,3 +1,7 @@
+create database link;
+
+use link;
+
 DROP TABLE IF EXISTS linkdata;
 
 CREATE TABLE linkdata (

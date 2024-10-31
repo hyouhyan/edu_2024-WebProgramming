@@ -5,8 +5,6 @@
     $ `/Applications/MAMP/Library/bin/mysql80/bin/mysql -u root -p`  
     Enter Password: `root`
 2. db作成  
-    mysql > `create database link`
-3. テーブル作成  
     mysql > `source ./init/linkdata.sql`
 
 ## ファイル構成
