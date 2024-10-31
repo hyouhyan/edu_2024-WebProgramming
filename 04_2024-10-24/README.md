@@ -14,16 +14,10 @@
 1. MySQLに入る  
     $ `/Applications/MAMP/Library/bin/mysql80/bin/mysql -u root -p`  
     Enter Password: `root`
-1. bbs用 db構築
-    1. db作成  
-        mysql > `create database bbs`
-    1. テーブル作成  
-        mysql > `source ./bbs-db/bbs-init.sql`
-1. rss用 db構築
-    1. db作成  
-        mysql > `create database rss_reader`
-    1. テーブル作成  
-        mysql > `source ./rss/rss-init.sql`
+1. bbs用 db構築  
+    mysql > `source ./bbs-db/bbs-init.sql`
+1. rss用 db構築  
+    mysql > `source ./rss/rss-init.sql`
 
 ## ファイル構成
 - bbs-db: bbs掲示板

@@ -1,3 +1,7 @@
+create database rss_reader;
+
+use rss_reader;
+
 DROP TABLE IF EXISTS rss_item;
 
 CREATE TABLE rss_item (

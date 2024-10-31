@@ -1,3 +1,7 @@
+create database bbs;
+
+use bbs;
+
 DROP TABLE IF EXISTS post;
 
 CREATE TABLE post (
