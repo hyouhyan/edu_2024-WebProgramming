@@ -10,6 +10,8 @@
     - [smarty-php/smarty](https://github.com/smarty-php/smarty/releases/tag/v4.5.4)よりSmarty 4.5.4をダウンロード
     - libsディレクトリを`bbs-db/smarty`及び、`todo-db/smarty`にコピー
 
+## MySQL db構築
+
 ## ファイル構成
 - bbs-db: bbs掲示板
 - rss: rssリーダー
