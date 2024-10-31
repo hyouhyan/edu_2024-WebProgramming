@@ -1,6 +1,7 @@
 # 第5回
 
 ## MySQL db構築
+
 1. mysqlに入る  
     $ `/Applications/MAMP/Library/bin/mysql80/bin/mysql -u root -p`  
     Enter Password: `root`
@@ -8,6 +9,7 @@
     mysql > `source ./init/linkdata.sql`
 
 ## ファイル構成
+
 ```
 05_2024-10-31/
 ├── init/
@@ -17,3 +19,10 @@
     ├── link.php
     └── linkadmin.php
 ```
+
+- init/  
+    - config.php: php用の定数もろもろ(SQLのパスワードとか)を定義するやつ  
+    - linkdata.sql: dbの初期化用ファイル  
+- link/  
+    - link.php: オンラインリンク集メインページ  
+    - linkadmin.php: SQLを操作するためのページ  
