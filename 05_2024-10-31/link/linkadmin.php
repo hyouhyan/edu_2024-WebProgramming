@@ -436,9 +436,9 @@ function cnv_formstr($array)
 {
 	foreach ($array as $k => $v) {
 		// 「magic_quotes_gpc = On」のときはエスケープ解除
-		if (get_magic_quotes_gpc()) {
-			$v = stripslashes($v);
-		}
+		// if (get_magic_quotes_gpc()) {
+		// 	$v = stripslashes($v);
+		// }
 		$v = htmlspecialchars($v);
 		$array[$k] = $v;
 	}

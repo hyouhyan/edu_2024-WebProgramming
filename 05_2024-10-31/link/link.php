@@ -67,9 +67,9 @@ function cnv_formstr($array)
 {
 	foreach ($array as $k => $v) {
 		// 「magic_quotes_gpc = On」のときはエスケープ解除
-		if (get_magic_quotes_gpc()) {
-			$v = stripslashes($v);	// 文字列のクォート部分を取り除く
-		}
+		// if (get_magic_quotes_gpc()) {
+		// 	$v = stripslashes($v);	// 文字列のクォート部分を取り除く
+		// }
 		$v = htmlspecialchars($v);
 		$array[$k] = $v;
 	}
