@@ -2,6 +2,9 @@ create database link;
 
 use link;
 
+SELECT @@character_set_database, @@collation_database;
+ALTER DATABASE COLLATE 'utf8mb4_general_ci';
+
 DROP TABLE IF EXISTS linkdata;
 
 CREATE TABLE linkdata (
