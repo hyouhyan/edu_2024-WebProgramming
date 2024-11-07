@@ -2,6 +2,9 @@ create database schedule;
 
 use schedule;
 
+SELECT @@character_set_database, @@collation_database;
+ALTER DATABASE COLLATE 'utf8mb4_general_ci';
+
 DROP TABLE IF EXISTS schedules;
 
 CREATE TABLE schedules (
