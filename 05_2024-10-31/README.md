@@ -14,6 +14,8 @@
     Enter Password: `root`
 2. db作成  
     mysql > `source ./init/linkdata.sql`
+3. dbを抜ける
+    mysql > `exit`
 
 ## ファイル構成
 
