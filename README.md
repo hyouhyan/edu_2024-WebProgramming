@@ -52,3 +52,9 @@
 </details>
 
 引用元: 愛知工業大学「シラバス検索」(https://syllabus.aitech.ac.jp/ext_syllabus/)
+
+# 関連リポジトリ
+
+一部課題(自主制作系)は別リポジトリにて作成しました。
+
+- 第6回課題: [スケジュール管理アプリ(scheduleManager_php)](https://github.com/hyouhyan/scheduleManager_php)
