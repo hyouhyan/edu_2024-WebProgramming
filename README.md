@@ -8,7 +8,7 @@
     - MAMP 7.0
         - Apache(port: 80)
         - PHP 8.3.9
-        - MySQL(port: 3306)
+        - MySQL 8.0.35 (port: 3306)
 
 ## ディレクトリ構造(例)
 
