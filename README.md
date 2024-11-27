@@ -9,6 +9,7 @@
         - Apache(port: 80)
         - PHP 8.3.9
         - MySQL 8.0.35 (port: 3306)
+    - Node.js 22.11.0
 
 ## ディレクトリ構造(例)
 
