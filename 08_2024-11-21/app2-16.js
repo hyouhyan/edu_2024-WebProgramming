@@ -22,7 +22,7 @@ function getFromClient(request, response) {
 		case '/':
 			var content = ejs.render(index_page, {
 				title: "Index",
-				content: "これはテンプレートを使ったサンプルページです。",
+				content: "これはIndexページです。",
 			});
 			response.writeHead(200, { 'Content-Type': 'text/html' });
 			response.write(content);
