@@ -3,14 +3,20 @@
 
 ## 仕様
 - 使用技術: PHP, MySQL, Node.js
-- 実行環境
-    - OS: MacOS 15.0.1(Sequoia)
-    - MAMP 7.0
-        - Apache(port: 80)
-        - PHP 8.3.9
-        - MySQL 8.0.35 (port: 3306)
-    - Node.js 22.11.0
-        - pnpm 9.14.2
+- OS: MacOS 15.0.1(Sequoia)
+
+### PHP (第1回 ~ 第5回)
+
+- MAMP 7.0
+    - Apache(port: 80)
+    - PHP 8.3.9
+    - MySQL 8.0.35 (port: 3306)
+
+### Node.js (第8回 ~ 第12回)
+
+- Node.js 22.11.0
+    - pnpm 9.14.2
+
 
 # 授業概要
 
