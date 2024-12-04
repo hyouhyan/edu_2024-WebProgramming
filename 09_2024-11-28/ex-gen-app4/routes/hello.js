@@ -10,6 +10,7 @@ router.get('/', (req, res, next) => {
 		path: '/rss?hl=ja&ie=UTF-8&oe=UTF-8&gl=JP&ceid=JP:ja'
 	};
 	http.get(opt, (res2) => {
+		res2.setEncoding('utf8');
 		var body = '';
 		res2.on('data', (data) => {
 			body += data;
