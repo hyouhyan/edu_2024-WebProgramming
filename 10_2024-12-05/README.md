@@ -10,8 +10,8 @@ https://sqlitebrowser.org/dl/ より、インストール
 テーブル名: `mydata`
 
 フィールド
-- id: INTEGER
-- name: TEXT
+- id: INTEGER, NN, PK, AI, U
+- name: TEXT, NN
 - mail: TEXT
 - age: INTEGER
 
@@ -22,3 +22,13 @@ https://sqlitebrowser.org/dl/ より、インストール
 | 2 | hanako | hanako@flower | 28 |
 | 3 | sachiko | sachiko@happy | 17 |
 | 4 | jiro | jiro@change | 6 |
+
+```sql
+CREATE TABLE "mydata" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT NOT NULL,
+	"mail"	TEXT,
+	"age"	INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+)
+```
