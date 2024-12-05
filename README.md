@@ -11,6 +11,8 @@
     - Apache(port: 80)
     - PHP 8.3.9
     - MySQL 8.0.35 (port: 3306)
+- 使用ライブラリ
+    - Smarty 4.5.4
 
 ### Node.js (第8回 ~ 第12回)
 
