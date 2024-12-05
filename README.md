@@ -2,7 +2,7 @@
 2024年度 後期 Webプログラミング及び演習 の授業で作成したプログラムたち。
 
 ## 仕様
-- 使用技術: PHP, MySQL, Node.js
+- 使用技術: PHP, MySQL, Node.js, SQLite
 - OS: MacOS 15.0.1(Sequoia)
 
 ### PHP (第1回 ~ 第5回)
@@ -16,6 +16,10 @@
 
 - Node.js 22.11.0
     - pnpm 9.14.2
+- 使用ライブラリ
+    - ejs 3.1.10
+    - express 4.21.1
+    - sqlite3 5.0.2
 
 # 環境構築
 
