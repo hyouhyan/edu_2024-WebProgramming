@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       ejs:
-        specifier: ^3.1.6
+        specifier: ^3.1.10
         version: 3.1.10
 
 packages:
