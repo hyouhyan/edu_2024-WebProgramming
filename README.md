@@ -24,7 +24,8 @@
 <details>
     <summary>pnpmのインストール <strong>(俺推奨)</strong> </summary>
 
-pnpmは教科書や先生の指示ではないが、npmよりも軽量で高速なため、インストールを推奨する。
+pnpmは教科書や先生の指示ではないが、npmよりも軽量で高速なため、インストールを推奨する。  
+(詳しく知りたい人は[この記事](https://azukiazusa.dev/blog/pnpm-npm/)読んでみて)
 
 ターミナルで以下のコマンドを実行する。
 ```bash
