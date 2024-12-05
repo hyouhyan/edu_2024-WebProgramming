@@ -17,6 +17,29 @@
 - Node.js 22.11.0
     - pnpm 9.14.2
 
+# 環境構築
+
+## Node.js
+
+<details>
+    <summary>pnpmのインストール <strong>(俺推奨)</strong> </summary>
+
+pnpmは教科書や先生推奨ではないが、npmよりも軽量で高速なため、インストールを推奨する。
+
+ターミナルで以下のコマンドを実行する。
+```bash
+npm install -g pnpm
+```
+
+使い方は、`npm`の代わりに`pnpm`を使うだけ。
+
+例)  
+`npm install` -> `pnpm install`  
+`npm start` -> `pnpm start`
+
+
+</details>
+
 
 # 授業概要
 
