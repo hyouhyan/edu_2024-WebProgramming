@@ -32,3 +32,11 @@ CREATE TABLE "mydata" (
 	PRIMARY KEY("id" AUTOINCREMENT)
 )
 ```
+
+## 実行方法
+1. 各ディレクトリに移動  
+    $ `cd ex-gen-app5`
+2. 依存パッケージのインストール  
+    $ `pnpm install`
+2. 実行  
+    $ `pnpm start`
