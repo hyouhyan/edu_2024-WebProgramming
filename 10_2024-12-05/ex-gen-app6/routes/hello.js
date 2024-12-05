@@ -4,7 +4,7 @@ const router = express.Router();
 const sqlite3 = require('sqlite3');
 
 // データベースオブジェクトの取得
-const db = new sqlite3.Database('mydb.sqlite3');
+const db = new sqlite3.Database('mydb.db');
 
 // GETアクセスの処理
 router.get('/', (req, res, next) => {
