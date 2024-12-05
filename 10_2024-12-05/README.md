@@ -6,7 +6,15 @@
 https://sqlitebrowser.org/dl/ より、インストール
 
 ### ダミーデータの作成
+ファイル名: `mydb.db`  
 テーブル名: `mydata`
+
+フィールド
+- id: INTEGER
+- name: TEXT
+- mail: TEXT
+- age: INTEGER
+
 
 | id | name | mail | age |
 | -- | ---- | ---- | --- |
