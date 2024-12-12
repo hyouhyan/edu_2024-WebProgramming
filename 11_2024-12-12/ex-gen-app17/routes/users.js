@@ -9,7 +9,6 @@ const pagesize = 3;  //1ページあたりのレコード数
 router.get('/', (req, res, next)=>{
   const page = req.query.page ? +req.query.page : 0;
   prisma.user.findMany({
-    orderBy: [{name:'asc'}],
     skip: page *pagesize, 
     take: pagesize,
   }).then(users=> {
