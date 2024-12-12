@@ -1,87 +1,122 @@
-var express = require('express');
-var router = express.Router();
-const db = require('../models/index');
+const express = require('express');
+const router = express.Router();
 
-const { Op } = require("sequelize");
+const ps = require('@prisma/client');
+const prisma = new ps.PrismaClient();
 
-router.get('/', (req, res, next) => {
-  const nm = req.query.name;
-  const ml = req.query.mail;
-  db.User.findAll().then(usrs => {
+router.get('/', (req, res, next)=>{
+    const id = +req.query.id;
+    if(!id) {
+        prisma.user.findMany().then(users=> {
+            const data = {
+                title:'Users/Index',
+                content:users
+            }
+            res.render('users/index', data);
+        });
+    } else {
+        prisma.user.findMany({
+            where: {id: {lte: id}}
+        }).then(usrs => {
+            var data = {
+                title: 'Users/Index',
+                content: usrs
+            }
+            res.render('users/index', data);
+        });
+    }
+    
+});
+
+router.get('/find', (req, res, next)=>{
+  const name = req.query.name;
+  const mail = req.query.mail;
+
+  prisma.user.findMany({
+    where: {
+      OR: [
+        { name: { contains: name}},
+        { mail: { contains: mail }}
+      ]
+    }
+  }).then(usrs => {
     var data = {
-      title: 'Users/Index',
+      title: 'Users/Find',
       content: usrs
     }
     res.render('users/index', data);
   });
 });
 
-router.get('/add', (req, res, next) => {
-  var data = {
-    title: 'Users/Add',
+router.get('/add', (req, res, next)=>{
+  const data = {
+    title:'Users/Add'
   }
-  res.render('users/add', data);
+  res.render('users/Add', data);
 });
 
-router.post('/add', (req, res, next) => {
-  db.sequelize.sync()
-    .then(() => db.User.create({
+router.post('/add', (req, res, next)=>{
+  prisma.user.create({
+    data:{
       name: req.body.name,
       pass: req.body.pass,
       mail: req.body.mail,
-      age: req.body.age
-    }))
-    .then(usr => {
-      res.redirect('/users');
-    })
+      age: +req.body.age
+
+    }
+  })
+  .then(()=> {
+    res.redirect('/users');
+  });
 });
 
-router.get('/edit', (req, res, next) => {
-  db.User.findByPk(req.query.id)
-    .then(usr => {
-      var data = {
-        title: 'Users/Edit',
-        form: usr
-      }
-      res.render('users/edit', data);
-    });
+router.get('/edit/:id', (req, res, next)=>{
+  const id = req.params.id;
+  prisma.user.findUnique(
+    {where:{ id:+id}}
+  ).then(usr=>{
+    const data = {
+      title:'Users/Edit',
+      user:usr
+    };
+    res.render('users/edit', data);
+  });
 });
 
-router.post('/edit', (req, res, next) => {
-  db.sequelize.sync()
-    .then(() => db.User.update({
-      name: req.body.name,
-      pass: req.body.pass,
-      mail: req.body.mail,
-      age: req.body.age
-    },
-      {
-        where: { id: req.body.id }
-      }))
-    .then(usr => {
-      res.redirect('/users');
-    });
+router.post('/edit', (req, res, next)=>{
+  const {id, name, pass, mail, age} = req.body;
+  prisma.user.update({
+    where:{ id: +id},
+    data:{
+      name:name,
+      mail:mail,
+      pass:pass,
+      age:+age
+    }
+  }).then(()=>{
+    res.redirect('/users');
+  });
 });
 
-router.get('/delete', (req, res, next) => {
-  db.User.findByPk(req.query.id)
-    .then(usr => {
-      var data = {
-        title: 'Users/Delete',
-        form: usr
-      }
-      res.render('users/delete', data);
-    });
+router.get('/delete/:id', (req, res, next)=>{
+  const id = req.params.id;
+  prisma.user.findUnique(
+    { where:{ id:+id}}
+  ).then(usr=>{
+    const data = {
+      title:'Users/Delete',
+      user:usr
+    };
+    res.render('users/delete', data);
+  });
 });
 
-router.post('/delete', (req, res, next) => {
-  db.sequelize.sync()
-    .then(() => db.User.destroy({
-      where: { id: req.body.id }
-    }))
-    .then(usr => {
-      res.redirect('/users');
-    });
+router.post('/delete', (req, res, next)=>{
+  prisma.User.delete({
+    where:{id:+req.body.id}
+  }).then(()=> {
+    res.redirect('/users');
+  });
 });
 
 module.exports = router;

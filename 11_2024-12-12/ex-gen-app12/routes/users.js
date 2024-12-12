@@ -1,22 +1,43 @@
-var express = require('express');
-var router = express.Router();
-const db = require('../models/index');
+const express = require('express');
+const router = express.Router();
 
-const { Op } = require("sequelize");
+const ps = require('@prisma/client');
+const prisma = new ps.PrismaClient();
 
-router.get('/', (req, res, next) => {
-  const nm = req.query.name;
-  db.User.findAll({
-    where: {
-      name: { [Op.like]: '%' + nm + '%' }
+router.get('/', (req, res, next)=>{
+    const id = +req.query.id;
+    if(!id) {
+        prisma.user.findMany().then(users=> {
+            const data = {
+                title:'Users/Index',
+                content:users
+            }
+            res.render('users/index', data);
+        });
+    } else {
+        prisma.user.findMany({
+            where: {id: {lte: id}}
+        }).then(usrs => {
+            var data = {
+                title: 'Users/Index',
+                content: usrs
+            }
+            res.render('users/index', data);
+        });
     }
-  }).then(usrs => {
-    var data = {
-      title: 'Users/Index',
-      content: usrs
-    }
-    res.render('users/index', data);
-  });
+    
 });
 
+router.get('/find', (req, res, next)=>{
+    const name = req.query.name;
+    prisma.user.findMany({
+        where: {name: {contains: name}}
+    }).then(usrs => {
+        var data = {
+            title:'Users/Find',
+            content: usrs
+        }
+        res.render('users/index', data);
+    }); 
+});
 module.exports = router;
