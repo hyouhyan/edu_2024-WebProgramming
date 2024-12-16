@@ -6,6 +6,6 @@
 1. 依存パッケージのインストール  
     $ `pnpm install`
 1. prismaをgenerateする  
-    $ `pnpm prisma generate`
+    $ `npx prisma generate`
 1. 実行  
     $ `pnpm start`
