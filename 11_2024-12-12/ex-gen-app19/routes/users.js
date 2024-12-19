@@ -10,6 +10,7 @@ var cursor = 1;
 
 prisma.$use(async (params, next) => {
   const result = await next(params);
+  if(result.length == undefined) return result;
   cursor = result[result.length - 1].id;
   if(cursor == lastCursor) {
     cursor = 1;
@@ -24,7 +25,6 @@ router.get('/', (req, res, next)=>{
     cursor: { id: cursor},
     take: 3,
   }).then(users=> {
-    
     const data = {
       title:'Users/Index',
       content:users
