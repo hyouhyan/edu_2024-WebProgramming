@@ -83,4 +83,5 @@ $ `pnpm setup`
 
 一部課題(自主制作系)は別リポジトリにて作成しました。
 
-- 第6回課題: [スケジュール管理アプリ(scheduleManager_php)](https://github.com/hyouhyan/scheduleManager_php)
+- 中間課題: [スケジュール管理アプリ(scheduleManager_php)](https://github.com/hyouhyan/scheduleManager_php)
+- 最終課題: [借金管理・共有アプリ(Loan Manager)](https://github.com/hyouhyan/loanManager)
