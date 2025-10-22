@@ -80,6 +80,11 @@ $ `pnpm setup`
 
 引用元: 愛知工業大学「シラバス検索」(https://syllabus.aitech.ac.jp/ext_syllabus/)
 
+# Contributors
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
+
 # 関連リポジトリ
 
 一部課題(自主制作系)は別リポジトリにて作成しました。
