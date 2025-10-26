@@ -14,5 +14,8 @@ jobs:
     steps:
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.11
+        with:
+          output_format: 'image'  # 出力形式を画像リンクに変更
+          image_size: 80          # 画像サイズを80pxに指定
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
